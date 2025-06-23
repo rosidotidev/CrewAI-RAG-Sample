@@ -1,9 +1,7 @@
-import sys
 import warnings
-from datetime import datetime
-from toolragcrew.tool_rag_crew import ToolRagCrew
-from pdfknowledgecrew.pdf_knowledge_crew import PDFKnowledgeCrew
-from faissragcrew.faiss_rag_crew import FAISSRagCrew
+from ragcrew.tool_rag_crew import ToolRagCrew
+from ragcrew.pdf_knowledge_crew import PDFKnowledgeCrew
+from ragcrew.faiss_rag_crew import FAISSRagCrew
 from dotenv import load_dotenv
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
@@ -53,4 +51,4 @@ def runFAISSRagCrew(topic='All recipes about with rice',pdf_path='./Easy_recipes
 
 
 if __name__ == "__main__":
-    runPDFKnowledgeCrew()
+    runFAISSRagCrew()

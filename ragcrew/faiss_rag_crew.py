@@ -7,7 +7,7 @@ from langchain_community.vectorstores import FAISS
 from openai import OpenAI
 from typing import List
 from langchain_openai import OpenAIEmbeddings  # 👈 nuovo import
-from faissragcrew.tools.custom_tool import PDFFAISSTool
+from ragcrew.tools.custom_tool import PDFFAISSTool
 
 
 @CrewBase
@@ -74,7 +74,7 @@ class FAISSRagCrew:
     def content_task(self) -> Task:
         return Task(
             config=self.tasks_config['content_task'],  # type: ignore[index]
-            output_file='report.md'
+            output_file='./report.md'
         )
 
     @crew
