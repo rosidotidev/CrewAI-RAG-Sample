@@ -34,7 +34,6 @@ class ToolRagCrew:
         return Agent(
             config=self.agents_config['content_analyst'],  # type: ignore[index]
             verbose=True,
-            tools=[self.getPDFRagTool()],
         )
 
     @task
