@@ -9,7 +9,6 @@ from typing import List
 from langchain_openai import OpenAIEmbeddings  # 👈 nuovo import
 from ragcrew.tools.custom_tool import PDFFAISSTool
 
-
 @CrewBase
 class FAISSRagCrew:
 
